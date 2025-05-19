@@ -1,0 +1,57 @@
+.header {
+    padding: rem(7) rem(11);
+    background-color: $neutral-0;
+    border-radius: rem(10);
+    box-shadow: 0 0 rem(4) $neutral-300;
+
+    body.dark-mode & {
+        background-color: $neutral-800;
+        box-shadow: unset;
+    }
+
+    @include breakpoint("md") {
+        border-radius: rem(20);
+    }
+
+    @include breakpoint("lg") {
+        padding: rem(12) rem(15);
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__button {
+        padding: rem(12) rem(13);
+        border-radius: rem(12);
+        border: none;
+        cursor: pointer;
+        transition: background-color .3s;
+
+        &:hover {
+            background-color: $neutral-300;
+        }
+
+        &:focus {
+            outline: rem(2) solid $red-400;
+            outline-offset: rem(2);
+        }
+
+        body.dark-mode & {
+            background-color: $neutral-700;
+
+            &:hover {
+                background-color: $neutral-600;
+            }
+        }
+    }
+
+    &__extension {
+
+        body.dark-mode & {
+            filter: brightness(0) invert(1);
+        }   
+    }
+}

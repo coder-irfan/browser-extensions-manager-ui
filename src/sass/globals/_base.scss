@@ -1,0 +1,31 @@
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size;
+    background: $light-gradient;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding: rem(20) rem(16);
+
+    @include breakpoint("md") {
+        padding: rem(30) rem(60);
+    }
+
+    @include breakpoint("lg") {
+        padding: rem(40) rem(135);
+    }
+
+    &.dark-mode {
+        background: $dark-gradient;
+    }
+}
